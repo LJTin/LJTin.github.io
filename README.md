@@ -6,20 +6,22 @@ https://blog.csdn.net/Hoshea_chx/article/details/78826689
 ```
  npm install
  ```
- 新建blog
- ```
- hexo new blogname
+新建blog
+```
+hexo new blogname
+```
+清缓存
+```
+hexo clean
 ```
 模板生成文件
 ```
 hexo g
 ``` 
 本地服务
-
 ```
 hexo s
 ``` 
-
 部署至github
 
 ```
