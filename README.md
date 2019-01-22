@@ -1,7 +1,9 @@
 # Hexo使用手册
+安装
 ```
  npm install
  ```
+ 新建blog
  ```
  hexo new blogname
 ```
