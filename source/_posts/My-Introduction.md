@@ -8,13 +8,18 @@ tags:
 
 # My Introduction
 
-我是LJTin，16年毕业，转行前端一名，至今还在前端的浪潮中奔波，追赶大佬，喜欢交友和瞎折腾。
-
-主要的技术大概是Vue，React，Node，小程序等等
+MyIntroduction: {
+  name: "LJTin",
+  Job: "Front End Engineer",
+  GraduationTime: 2016,
+  Hobbies: ["交友", "瞎折腾", "学习"],
+  MainTech: ["Vue", "React", "Node", "Koa", "Express", "mpvue", "小程序"],
+  SecondaryTech:["linux", "python"]
+}
 
 很久以前就知道hexo blog这回事，但一直玩别的东西，没着手这一块，近期发现这是一块不错的空间，所以想在这里玩玩。
 
-如果各位大佬想一起玩，请联系我：
+如果各位大佬看到了这里，那么有猿千里来相会吧：
 
-  邮箱：jiantinglian619@gmail.com
-  微信：ai562751028
+  email：jiantinglian619@gmail.com
+  wechat：ai562751028
