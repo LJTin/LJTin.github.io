@@ -16,5 +16,5 @@ tags:
 
 如果各位大佬想一起玩，请联系我：
 
-# 邮箱：jiantinglian619@gmail.com
-# 微信：ai562751028
+  邮箱：jiantinglian619@gmail.com
+  微信：ai562751028
