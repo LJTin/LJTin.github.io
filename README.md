@@ -1,3 +1,6 @@
+主要参考文章链接
+https://blog.csdn.net/Hoshea_chx/article/details/78826689
+
 # Hexo使用手册
 安装
 ```
