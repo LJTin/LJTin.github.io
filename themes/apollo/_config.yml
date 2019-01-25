@@ -3,7 +3,7 @@ menu:
     Archive: /archives/
     JueJin: https://juejin.im/user/5be564e2f265da615d7226e5
     GitHub: https://github.com/LJTin
-    Rss: /atom.xml
+    About: /2019/01/21/My-Introduction/
 
 favicon: /favicon.png
 logo: /favicon.png
@@ -18,4 +18,4 @@ duoshuo:
 # ga: UA-xxxxxxxx-x
 
 # Copyright Infomation
-startyear: 2015
+startyear: 2019

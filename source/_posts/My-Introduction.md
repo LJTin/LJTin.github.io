@@ -16,7 +16,6 @@ MyIntroduction: {
   SecondaryTech:["linux", "python"]
 }
 ```
-很久以前就知道hexo blog这回事，但一直玩别的东西，没着手这一块，近期发现这是一块不错的空间，所以想在这里玩玩。
 
 如果各位大佬看到了这里，那么有猿千里来相会吧：
 
