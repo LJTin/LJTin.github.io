@@ -2,6 +2,11 @@
 https://blog.csdn.net/Hoshea_chx/article/details/78826689
 
 # Hexo使用手册
+
+#!!!
+首先需要确保你已经下载了Node
+
+
 安装
 ```
  npm install

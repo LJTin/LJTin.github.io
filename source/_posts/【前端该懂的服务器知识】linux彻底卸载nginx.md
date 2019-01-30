@@ -1,7 +1,7 @@
 ---
-title: 【前端该了解的服务器知识】linux彻底卸载nginx
+title: 【前端该懂的服务器知识】linux卸载nginx
 date: 2019-01-27 16:01:19
-tags:
+tags: 前端
 ---
 
 # 前言：
