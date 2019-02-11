@@ -1,5 +1,5 @@
 ---
-title: A guide to this in JavaScript
+title: A guide to this in JavaScript Part-1
 date: 2019-02-01 19:50:58
 tags:
 ---
