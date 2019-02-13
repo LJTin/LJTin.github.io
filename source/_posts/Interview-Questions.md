@@ -26,6 +26,7 @@ tags: 面试
 > 1.vue在实例化过程中，遍历data所有的属性并使用Object.defineProperty将属性全转化为getter/setter
 > 2.每个实例对象都有一个watcher，在模板编译过程中使用getter访问data的属性，并且标记为依赖，建立视图与数据的联系
 > 3.当依赖的数据发生了变化，就调用了setter方法，watcher会对比前后两个值的变化，决定是否通知视图重新渲染
+
 4.v-if和v-show的区别
 
 5.单页如何做优化
