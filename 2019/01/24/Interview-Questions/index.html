@@ -2,26 +2,98 @@
 <p>本文只记录面试过程中遇到的面试题(不定更)，答案请自行百度(自己动手、丰衣足食)</p>
 </blockquote>
 <h1 id="框架知识"><a href="#框架知识" class="headerlink" title="框架知识"></a>框架知识</h1><p>1.谈谈对ssr的了解</p>
+<blockquote>
+<p>seo与首屏渲染快</p>
+</blockquote>
 <p>2.react和vue的区别</p>
+<blockquote>
+<p><strong>react</strong>:<br>1.all in js<br>        2.函数式<br>        3.单向数据流</p>
+</blockquote>
+<blockquote>
+<p><strong>vue</strong>:<br>1.html css js在一个文件下<br>     2.响应式<br>     3.双向绑定</p>
+</blockquote>
 <p>3.vue数据驱动的原理</p>
+<blockquote>
+<p>1.vue在实例化过程中，遍历data所有的属性并使用Object.defineProperty将属性全转化为getter/setter<br>2.每个实例对象都有一个watcher，在模板编译过程中使用getter访问data的属性，并且标记为依赖，建立视图与数据的联系<br>3.当依赖的数据发生了变化，就调用了setter方法，watcher会对比前后两个值的变化，决定是否通知视图重新渲染</p>
+</blockquote>
 <p>4.v-if和v-show的区别</p>
 <p>5.单页如何做优化</p>
 <p>6.vuex的理解</p>
 <p>7.vue的生命周期</p>
+<blockquote>
+<p>参考本文，个人感觉写的比较详细了 <a href="https://segmentfault.com/a/1190000011381906" target="_blank" rel="noopener">https://segmentfault.com/a/1190000011381906</a></p>
+</blockquote>
+<p>8.beforeCreate和Created的区别：</p>
+<blockquote>
+<p>beforeCreate 获取不到el和data<br>Created 获取的到data，但获取不到el（mounted中可获取）</p>
+</blockquote>
 <h1 id="Git知识"><a href="#Git知识" class="headerlink" title="Git知识"></a>Git知识</h1><p>1.git创建远程分支的流程</p>
 <p>2.git中rebase是做什么的，有何意义</p>
+<blockquote>
+<p>把提交的记录变得流畅</p>
+</blockquote>
 <h1 id="非框架知识"><a href="#非框架知识" class="headerlink" title="非框架知识"></a>非框架知识</h1><p>1.serviceworker</p>
+<blockquote>
+<p>参考本文<a href="https://www.cnblogs.com/dojo-lzz/p/8047336.html" target="_blank" rel="noopener">https://www.cnblogs.com/dojo-lzz/p/8047336.html</a></p>
+</blockquote>
 <p>2.哪些方式导致内存泄漏</p>
 <p>3.本地存储及区别</p>
+<blockquote>
+<p>这里重点讨论<strong>IndexedDB</strong>和<strong>WebSQL</strong>：参考本文加以理解<a href="http://www.cnblogs.com/ljwsyt/p/9760266.html" target="_blank" rel="noopener">http://www.cnblogs.com/ljwsyt/p/9760266.html</a></p>
+</blockquote>
 <p>4.闭包、作用及处理，垃圾回收器</p>
+<blockquote>
+<p><strong>概念</strong>：1. 作为一个函数变量的一个引用，当函数返回时，其处于激活状态。<br>　　      2. 一个闭包就是当一个函数返回时，一个没有释放资源的栈区。<br><strong>作用</strong>：实现封装，管理私有变量和私有方法，将变量（状态）的变化封装在安全的环境中<br><strong>弊端</strong>：让变量始终保持在内存中，不被释放，内存消耗会很大<br><strong>处理</strong>：使用后的变量置为Null，等待垃圾回收器回收</p>
+</blockquote>
+<blockquote>
+<p>垃圾回收器：两种方式：1.<strong>标记清除</strong>（主要）2.<strong>引用计数</strong></p>
+</blockquote>
 <p>5.按需加载（webpack）</p>
+<blockquote>
+<p>打包原理: 先找到入口文件，递归探索出所有依赖的模块，最后 利用 Loader 进行不同文件类型的处理，打包成一个<strong>具有chunkFilename</strong>的 Javascript 文件。</p>
+</blockquote>
 <p>6.阻止冒泡</p>
+<blockquote>
+<p>event.stopPropagation()</p>
+</blockquote>
 <p>7.css动画和js动画的区别</p>
+<blockquote>
+<p>参考本文<a href="https://www.cnblogs.com/simba-lkj/p/6139066.html" target="_blank" rel="noopener">https://www.cnblogs.com/simba-lkj/p/6139066.html</a></p>
+</blockquote>
 <p>8.cdn的原理，哪些东西可以使用cdn</p>
+<blockquote>
+<p>  <strong>介绍</strong>：经策略性部署的整体系统，解决由于<strong>网络带宽小、用户访问量大、网点分布不均而产生的用户访问网站响应速度慢</strong>的问题。</p>
+</blockquote>
+<blockquote>
+<p>  <strong>目的</strong>:在现有的Internet中增加一层新的网络架构，将网站的内容发布到<strong>最接近用户</strong>的网络“边缘”，使用户可以<strong>就近</strong>取得所需的内容，<strong>解决 Internet 网络拥塞状况，提高用户访问网站的响应速度。</strong></p>
+</blockquote>
 <p>9.深拷贝和浅拷贝的区别</p>
-<p>10.模块化</p>
+<blockquote>
+<p>参考本文<a href="https://www.cnblogs.com/echolun/p/7889848.html" target="_blank" rel="noopener">https://www.cnblogs.com/echolun/p/7889848.html</a></p>
+</blockquote>
+<blockquote>
+<p>浅拷贝：一层遍历和Object.assign()</p>
+</blockquote>
+<blockquote>
+<p>深拷贝主要针对<strong>引用类型</strong>,拷贝<strong>所有层级</strong>的属性</p>
+</blockquote>
+<ul>
+<li><p>方法一：递归实现深拷贝</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">function deepClone(obj)&#123;</span><br><span class="line">    let objClone = Array.isArray(obj)?[]:&#123;&#125;;</span><br><span class="line">    if(obj &amp;&amp; typeof obj===&quot;object&quot;)&#123;</span><br><span class="line">        for(key in obj)&#123;</span><br><span class="line">            if(obj.hasOwnProperty(key))&#123;</span><br><span class="line">                //判断ojb子元素是否为对象，如果是，递归复制</span><br><span class="line">                if(obj[key]&amp;&amp;typeof obj[key] ===&quot;object&quot;)&#123;</span><br><span class="line">                    objClone[key] = deepClone(obj[key]);</span><br><span class="line">                &#125;else&#123;</span><br><span class="line">                    //如果不是，简单复制</span><br><span class="line">                    objClone[key] = obj[key];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return objClone;</span><br><span class="line">&#125;    </span><br><span class="line">let a=[1,2,3,4],</span><br><span class="line">    b=deepClone(a);</span><br><span class="line">a[0]=2;</span><br><span class="line">console.log(a,b);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>方法二：JSON.Parse和JSON.stringify（兼容ie8+，对于<strong>正则表达式类型和函数类型</strong>无法深拷贝，会直接丢失相应的值,而且会抛弃<strong>对象的constructer</strong>）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function deepClone(obj)&#123;</span><br><span class="line">    let _obj = JSON.stringify(obj),</span><br><span class="line">        objClone = JSON.parse(_obj);</span><br><span class="line">    return objClone</span><br><span class="line">&#125;    </span><br><span class="line">let a=[0,1,[2,3],4],</span><br><span class="line">    b=deepClone(a);</span><br><span class="line">a[0]=1;</span><br><span class="line">a[2][0]=1;</span><br><span class="line">console.log(a,b);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>10.es6</p>
 <p>11.有哪几种继承</p>
+<blockquote>
+<p>1.原型链继承：将父类的实例作为子类的原型<br>  2.构造继承：使用父类的构造函数来增强子类实例，等于是复制父类的实例属性给子类（没用到原型）<br>  3.实例继承：为父类实例添加新特性，作为子类实例返回<br>  4.拷贝继承<br>  5.组合继承：通过调用父类构造，继承父类的属性并保留传参的优点，然后通过将父类实例作为子类原型，实现函数复用<br>  6.寄生组合继承：通过寄生方式，砍掉父类的实例属性，这样，在调用两次父类的构造的时候，就不会初始化两次实例方法/属性，避免的组合继承的缺点<br>  7.ES6的Class继承</p>
+</blockquote>
 <p>12.跨越的处理方案</p>
+<blockquote>
+<p>  1、 通过jsonp跨域 （只支持get）<br>    2、 document.domain + iframe跨域（仅限主域相同，子域不同的跨域应用场景）<br>    3、 window.name + iframe跨域<br>    –  3.1name值在不同的页面（甚至不同域名）加载后依旧存在，并且可以支持非常长的 name 值（2MB）。<br>    4、 postMessage跨域<br>    5、 跨域资源共享（CORS）<code>Access-Control-Allow-Origin</code><br>    –  5.1普通跨域请求：只服务端设置Access-Control-Allow-Origin即可，前端无须设置，<br>    –  5.2若要带cookie请求：前后端都需要设置。<br>    6、 nginx代理跨域<br>    7、 nodejs中间件代理跨域<br>    8、 Vue跨域：(proxy)</p>
+</blockquote>
 <p>13.对web标准的理解及对w3c的认识</p>
 <p>14.css3和h5的新特性新属性</p>
 <p>15.性能优化</p>
@@ -29,5 +101,64 @@
 <p>17.lazyload的原理</p>
 <p>18.prototype为obj添加一个属性和方法，并使用（代码实现）</p>
 <p>19.sea和require的区别、优缺点</p>
-<p>20.es6</p>
+<blockquote>
+<p>最大的区别：SeaJS对模块的态度是懒执行, 而RequireJS对模块的态度是预执行<br>  RequireJS:（1）实现js文件的异步加载，避免网页失去响应；<br>            （2）管理模块之间的依赖性，便于代码的编写和维护。  </p>
+</blockquote>
+<p>21.web worker</p>
+<blockquote>
+<p>简而言之就是子线程，本质就是数据刷新和页面渲染不产生冲突，但是弊端是兼容性不好，而且无法达到像websocket轮询的效果</p>
+</blockquote>
+<h1 id="！！！"><a href="#！！！" class="headerlink" title="！！！"></a>！！！</h1><p>22.箭头函数什么情况下不能用(<strong>需要动态上下文的场景</strong>)</p>
+<blockquote>
+<p>1.定义对象方法<br>2.定义原型方法<br>3.定义事件回调函数<br>4.定义构造函数<br>5.刻意追求过短的代码，可能会给代码阅读和逻辑理解带来困难。</p>
+</blockquote>
+<p>23.rem和em的区别</p>
+<blockquote>
+<p>区别：rem是基于<strong>html元素的字体大小</strong>来决定，而em则根据<strong>使用它的元素的大小</strong>决定（很多人错误以为是根据父类元素，实际上是使用它的元素继承了父类的属性才会产生的错觉）</p>
+</blockquote>
+<blockquote>
+<p><strong>举例</strong>：<br>    当使用 rem 单位，他们转化为像素大小取决于页根元素的字体大小，即 html 元素的字体大小。 根元素字体大小乘以你 rem 值。<br>    例如，根元素的字体大小 16px，10rem 将等同于 160px，即 10 x 16 = 160。 </p>
+</blockquote>
+<blockquote>
+<p>  当使用em单位时，像素值将是em值乘以使用em单位的元素的字体大小。<br>    弊端：继承</p>
+</blockquote>
+<p>24.移动端适配</p>
+<blockquote>
+<p>1.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;&quot;&gt;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>2.手淘团队flexible.js布局</p>
+</blockquote>
+<p>25.数组如何去重（ES5,ES6）</p>
+<blockquote>
+<p>1.ES6中新增了<strong>Set数据结构</strong>，类似于数组，但是 它的成员都是<strong>唯一</strong>的 ，其构造函数可以接受一个数组作为参数<br>2.ES6中Array新增了一个静态方法<strong>Array.from</strong>，可以把<strong>类似数组的对象</strong>转换为<strong>数组</strong></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ES6:</span><br><span class="line">let array = [1,2,3,4,4,2,1,5];</span><br><span class="line">let res = Array.from(new Set(array))</span><br><span class="line">console.log(res)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ES5方法一</span><br><span class="line">function unique(arr) &#123;</span><br><span class="line">    return arr.filter(function(item, index, arr) &#123;</span><br><span class="line">        //当前元素，在原始数组中的第一个索引==当前索引值，否则返回当前元素</span><br><span class="line">        return arr.indexOf(item, 0) === index</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ES5方法二</span><br><span class="line">function uniqueArr(arr)&#123;</span><br><span class="line">    var arr2 = []</span><br><span class="line">    var len = arr.length</span><br><span class="line">    for(var i=0;i&lt;len; i++) &#123;</span><br><span class="line">        if(arr2.indexOf(arr[i]) === -1) &#123;</span><br><span class="line">            arr2.push(arr[i])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return arr2</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>27.vue的虚拟dom原理是什么？怎么实现的？！！！！！！！！！！！！！难以理解</p>
+<p>28.http请求头里都有什么内容</p>
+<ul>
+<li>Accept:浏览器能够处理的内容类型</li>
+<li>Accept-Charset:浏览器能够显示的字符集</li>
+<li>Accept-Encoding：浏览器能够处理的压缩编码</li>
+<li>Accept-Language：浏览器当前设置的语言</li>
+<li>Connection：浏览器与服务器之间连接的类型</li>
+<li>Cookie：当前页面设置的任何Cookie</li>
+<li>Host：发出请求的页面所在的域</li>
+<li>Referer：发出请求的页面的URL</li>
+<li>User-Agent：浏览器的用户代理字符串</li>
+</ul>
+<p>29.promise顺序执行 </p>
+<blockquote>
+<p>方法一:  then()执行<br>方法二： 使用队列执行<br>方法三： 使用async、await实现类似同步编程</p>
+</blockquote>
+<p>30.call apply bind区别和用法</p>
+<blockquote>
+<p>都是为了改变某个函数运行时的上下文而存在的（就是为了改变函数内部this的指向）；<br>apply的<strong>第二个参数</strong>是一个<strong>数组</strong>，call第二个及以后的参数都是数组中的元素<br>bind与apply、call<strong>最大的区别</strong>就是：bind不会立即调用，其他两个会立即调用   </p>
+</blockquote>
+<p>31.<strong>THIS</strong>（<strong>看完你就明白了</strong>）</p>
+<blockquote>
+<p>this 就是你 call 一个函数时，传入的第一个参数。（请务必背下来「this 就是 call 的第一个参数」）<br>参考本文，一看就懂<a href="https://zhuanlan.zhihu.com/p/23804247" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/23804247</a></p>
+</blockquote>
 </div></article></div></main><footer><div class="paginator"><a href="/2019/01/27/【前端该懂的服务器知识】linux彻底卸载nginx/" class="prev">PREV</a><a href="/2019/01/21/When to use var vs let vs const in JavaScript/" class="next">NEXT</a></div><div class="copyright"><p>© 2019 <a href="http://yoursite.com">LJTin</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
