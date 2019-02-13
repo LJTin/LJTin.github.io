@@ -1,0 +1,53 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> PM2 · LJTin's Blog</title><meta name="description" content="PM2 - LJTin"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="LJTin's Blog"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://juejin.im/user/5be564e2f265da615d7226e5" target="_blank" class="nav-list-link">JUEJIN</a></li><li class="nav-list-item"><a href="https://github.com/LJTin" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/2019/01/21/My-Introduction/" target="_self" class="nav-list-link">ABOUT</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">PM2</h1><div class="post-info">Feb 13, 2019</div><div class="post-content"><p>本文只记录PM2的运行时，需要其他版本的可点击以下链接👇👇👇<br>参考官方文档：<a href="https://pm2.io/doc/" target="_blank" rel="noopener">https://pm2.io/doc/</a></p>
+<h1 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h1><p>PM2 Runtime是具有内置Load Balancer的Node.js应用程序的生产过程管理器。它允许您永久保持应用程序的活动，无需停机即可重新加载它们，并促进常见的Devops任务。</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>请自行学习，使用搜索引擎或点击链接👆👆👆</p>
+<h1 id="命令行大聚集：-以下-js可省略"><a href="#命令行大聚集：-以下-js可省略" class="headerlink" title="命令行大聚集：(以下.js可省略)"></a>命令行大聚集：(以下.js可省略)</h1><h2 id="常用的命令行"><a href="#常用的命令行" class="headerlink" title="常用的命令行"></a>常用的命令行</h2><p>启动应用程序</p>
+<blockquote>
+<p><code>pm2 start app.js</code></p>
+</blockquote>
+<p>文件更改时启动并自动重新启动链接</p>
+<blockquote>
+<p><code>pm2 start app.js --watch [--ignore-watch /*/]</code></p>
+</blockquote>
+<p>停止应用程序</p>
+<blockquote>
+<p><code>pm2 stop app.js</code></p>
+</blockquote>
+<p>停止并启动程序 </p>
+<blockquote>
+<p><code>pm2 restart app.js</code> </p>
+</blockquote>
+<p>启动时启动PM2</p>
+<blockquote>
+<p><code>pm2 startup</code></p>
+</blockquote>
+<p>以集群模式启动，使用-i选项 </p>
+<blockquote>
+<p><code>pm2 start app.js -i 4</code> (4为集群数量)<br><code>pm2 start app.js -i max</code>（max可以自动检测可用的CPU数量）</p>
+</blockquote>
+<p>展示pm2的列表 </p>
+<blockquote>
+<p><code>pm2 ls</code></p>
+</blockquote>
+<p>展示日志</p>
+<blockquote>
+<p><code>pm2 logs</code></p>
+</blockquote>
+<p>监控</p>
+<blockquote>
+<p><code>pm2 monit</code></p>
+</blockquote>
+<p>从列表中停止并删除一个进程 </p>
+<blockquote>
+<p><code>pm2 detele app</code></p>
+</blockquote>
+<h2 id="不常用"><a href="#不常用" class="headerlink" title="不常用"></a>不常用</h2><p>使用重新加载而不是重新启动0秒停机时间重新加载</p>
+<blockquote>
+<p><code>pm2 reload app</code></p>
+</blockquote>
+<p>重置重启计数器</p>
+<blockquote>
+<p><code>pm2 reset all</code></p>
+</blockquote>
+<p>未完待续······</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2019/02/01/A-guide-to-this-in-JavaScript-Part-1/" class="next">下一篇</a></div><div class="copyright"><p>© 2019 <a href="http://yoursite.com">LJTin</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>

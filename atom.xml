@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-11T16:18:07.845Z</updated>
+  <updated>2019-02-13T15:42:10.079Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PM2</title>
+    <link href="http://yoursite.com/2019/02/13/PM2/"/>
+    <id>http://yoursite.com/2019/02/13/PM2/</id>
+    <published>2019-02-13T15:00:38.000Z</published>
+    <updated>2019-02-13T15:42:10.079Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文只记录PM2的运行时，需要其他版本的可点击以下链接👇👇👇<br>参考官方文档：<a href="https://pm2.io/doc/" target="_blank" rel="noopener">https://pm2.io/doc/</a></p><h1 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h1><p>PM2 Runtime是具有内置Load Balancer的Node.js应用程序的生产过程管理器。它允许您永久保持应用程序的活动，无需停机即可重新加载它们，并促进常见的Devops任务。</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>请自行学习，使用搜索引擎或点击链接👆👆👆</p><h1 id="命令行大聚集：-以下-js可省略"><a href="#命令行大聚集：-以下-js可省略" class="headerlink" title="命令行大聚集：(以下.js可省略)"></a>命令行大聚集：(以下.js可省略)</h1><h2 id="常用的命令行"><a href="#常用的命令行" class="headerlink" title="常用的命令行"></a>常用的命令行</h2><p>启动应用程序</p><blockquote><p><code>pm2 start app.js</code></p></blockquote><p>文件更改时启动并自动重新启动链接</p><blockquote><p><code>pm2 start app.js --watch [--ignore-watch /*/]</code></p></blockquote><p>停止应用程序</p><blockquote><p><code>pm2 stop app.js</code></p></blockquote><p>停止并启动程序 </p><blockquote><p><code>pm2 restart app.js</code> </p></blockquote><p>启动时启动PM2</p><blockquote><p><code>pm2 startup</code></p></blockquote><p>以集群模式启动，使用-i选项 </p><blockquote><p><code>pm2 start app.js -i 4</code> (4为集群数量)<br><code>pm2 start app.js -i max</code>（max可以自动检测可用的CPU数量）</p></blockquote><p>展示pm2的列表 </p><blockquote><p><code>pm2 ls</code></p></blockquote><p>展示日志</p><blockquote><p><code>pm2 logs</code></p></blockquote><p>监控</p><blockquote><p><code>pm2 monit</code></p></blockquote><p>从列表中停止并删除一个进程 </p><blockquote><p><code>pm2 detele app</code></p></blockquote><h2 id="不常用"><a href="#不常用" class="headerlink" title="不常用"></a>不常用</h2><p>使用重新加载而不是重新启动0秒停机时间重新加载</p><blockquote><p><code>pm2 reload app</code></p></blockquote><p>重置重启计数器</p><blockquote><p><code>pm2 reset all</code></p></blockquote><p>未完待续······</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;本文只记录PM2的运行时，需要其他版本的可点击以下链接👇👇👇&lt;br&gt;参考官方文档：&lt;a href=&quot;https://pm2.io/doc/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://pm2.io/doc/&lt;/a&gt;&lt;/p&gt;
+&lt;h1 
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>A guide to this in JavaScript Part-1</title>
