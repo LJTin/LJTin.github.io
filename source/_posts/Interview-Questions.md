@@ -247,7 +247,19 @@ function uniqueArr(arr){
 - Referer：发出请求的页面的URL
 - User-Agent：浏览器的用户代理字符串
 
-29.promise顺序执行
+29.promise顺序执行 
+
 > 方法一:  then()执行
 > 方法二： 使用队列执行
 > 方法三： 使用async、await实现类似同步编程
+
+30.call apply bind区别和用法
+
+> 都是为了改变某个函数运行时的上下文而存在的（就是为了改变函数内部this的指向）；
+apply的**第二个参数**是一个**数组**，call第二个及以后的参数都是数组中的元素
+bind与apply、call**最大的区别**就是：bind不会立即调用，其他两个会立即调用   
+
+
+31.**THIS**（**看完你就明白了**）
+> this 就是你 call 一个函数时，传入的第一个参数。（请务必背下来「this 就是 call 的第一个参数」）
+> 参考本文，一看就懂https://zhuanlan.zhihu.com/p/23804247
