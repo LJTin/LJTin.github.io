@@ -247,6 +247,9 @@
 <blockquote>
 <p><strong>原型链</strong>:在JavaScript中万物都是对象，对象和对象之间也有关系，并不是孤立存在的。对象之间的继承关系，在JavaScript中是通过prototype对象指向父类对象，直到指向Object对象为止，这样就形成了一个原型指向的链条<br><strong>原理</strong>：当我们访问对象的一个属性或方法时，它会先在对象自身中寻找，如果有则直接使用，如果没有则会去原型对象中寻找，如果找到则直接使用。如果没有则去原型的原型中寻找,直到找到Object对象的原型，Object对象的原型没有原型，如果在Object原型中依然没有找到，则返回undefined。<br><strong>方法</strong>：使用对象的hasOwnProperty()来检查对象自身是否含有该属性，使用in来检查是否在整条原型链上是否含有该属性<br><strong>注意点</strong>：Object是JS中所有对象数据类型的基类(最顶层的类)在Object.prototype上没有<strong>proto</strong>这个属性。</p>
 </blockquote>
+<blockquote>
+<p>所有的引用类型（数组、对象、函数），都具有对象特性，即可自由扩展属性（null除外）<br>  所有的引用类型（数组、对象、函数），都有一个<strong>proto</strong>属性，属性值是一个普通的对象<br>  所有的函数，都有一个prototype属性，属性值也是一个普通的对象<br>  所有的引用类型（数组、对象、函数），<strong>proto</strong>属性值指向它的构造函数的prototype属性值</p>
+</blockquote>
 <p>33.GraphQL</p>
 <blockquote>
 <p>详情请关注官网链接<a href="http://graphql.cn/" target="_blank" rel="noopener">http://graphql.cn/</a><br><strong>概念</strong>：一种用于 API 的查询语言，代替rest api</p>
