@@ -181,6 +181,7 @@ console.log(a,b);
   7.ES6的Class继承
 
 12.跨越的处理方案
+>   协议，域名，端口不用
 >   1、 通过jsonp跨域 （只支持get）
     2、 document.domain + iframe跨域（仅限主域相同，子域不同的跨域应用场景）
     3、 window.name + iframe跨域
