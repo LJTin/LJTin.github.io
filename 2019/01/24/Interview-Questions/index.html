@@ -125,7 +125,7 @@
 </blockquote>
 <p>12.跨越的处理方案</p>
 <blockquote>
-<p>  1、 通过jsonp跨域 （只支持get）<br>    2、 document.domain + iframe跨域（仅限主域相同，子域不同的跨域应用场景）<br>    3、 window.name + iframe跨域<br>    –  3.1name值在不同的页面（甚至不同域名）加载后依旧存在，并且可以支持非常长的 name 值（2MB）。<br>    4、 postMessage跨域<br>    5、 跨域资源共享（CORS）<code>Access-Control-Allow-Origin</code><br>    –  5.1普通跨域请求：只服务端设置Access-Control-Allow-Origin即可，前端无须设置，<br>    –  5.2若要带cookie请求：前后端都需要设置。<br>    6、 nginx代理跨域<br>    7、 nodejs中间件代理跨域<br>    8、 Vue跨域：(proxy)</p>
+<p>  协议，域名，端口不用<br>  1、 通过jsonp跨域 （只支持get）<br>    2、 document.domain + iframe跨域（仅限主域相同，子域不同的跨域应用场景）<br>    3、 window.name + iframe跨域<br>    –  3.1name值在不同的页面（甚至不同域名）加载后依旧存在，并且可以支持非常长的 name 值（2MB）。<br>    4、 postMessage跨域<br>    5、 跨域资源共享（CORS）<code>Access-Control-Allow-Origin</code><br>    –  5.1普通跨域请求：只服务端设置Access-Control-Allow-Origin即可，前端无须设置，<br>    –  5.2若要带cookie请求：前后端都需要设置。<br>    6、 nginx代理跨域<br>    7、 nodejs中间件代理跨域<br>    8、 Vue跨域：(proxy)</p>
 </blockquote>
 <p>13.重绘和回流<br>重绘(repaint): 当元素样式的改变不影响布局时，浏览器将使用重绘对元素进行更新，此时由于只需要UI层面的重新像素绘制，因此 损耗较少</p>
 <p>回流(reflow): 当元素的尺寸、结构或触发某些属性时，浏览器会重新渲染页面，称为回流。此时，浏览器需要重新经过计算，计算后还需要重新页面布局，因此是较重的操作。会触发回流的操作:</p>
