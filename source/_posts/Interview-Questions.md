@@ -10,6 +10,7 @@ tags: 面试
 
 1.谈谈对ssr的了解
 > seo与首屏渲染快
+> 比较适合首屏使用ssr进行快速渲染，更利于seo
 
 2.react和vue的区别
 > **react**:
@@ -162,7 +163,13 @@ a[2][0]=1;
 console.log(a,b);
 ```
 
-10.es6
+10.Map和WeakMap与Object
+> ES6新的数据结构，更为完善的hash结构
+> 与Object的区别：Map的键可以是个各种类型的数值，但Object只能是字符串类型或Symbol类型
+> Map与WeakMap的区别：WeakMap只接受对象作为键名，键名是对象的弱引用，当对象被回收后，WeakMap自动移除对应的键值对，WeakMap结构有助于防止内存泄漏。 
+
+# Set和WeakSet
+> Set集合，没有重复元素的集合,WeakSet的键必须为对象，与WeakMap类似
 
 11.有哪几种继承
 > 1.原型链继承：将父类的实例作为子类的原型
