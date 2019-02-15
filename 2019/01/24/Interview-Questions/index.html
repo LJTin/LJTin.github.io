@@ -54,6 +54,37 @@
 <blockquote>
 <p>把提交的记录变得流畅</p>
 </blockquote>
+<h1 id="微信小程序"><a href="#微信小程序" class="headerlink" title="微信小程序"></a>微信小程序</h1><p>1.简述微信小程序原理？</p>
+<blockquote>
+<ul>
+<li>1.微信小程序采用JavaScript、WXML、WXSS三种技术进行开发<ul>
+<li>2.小程序分为两个部分webview和appService。其中webview主要用来展现UI，appService有来处理业务逻辑、数据及接口调用。它们在两个进程中运行，通过系统层JSBridge实现通信，实现UI的渲染、事件的处理</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p>2.rpx（responsivepixel）</p>
+<blockquote>
+<p>微信小程序新定义了一个尺寸单位，可以适配不同分辨率的屏幕，它规定屏幕宽为750rpx，如在 iPhone6 上，屏幕宽度为375px，共有750个物理像素，则750rpx = 375px =750物理像素，1rpx = 0.5px = 1物理像素。</p>
+</blockquote>
+<p>3.wx.navigateTo(Object object)</p>
+<blockquote>
+<p>保留当前页面。但小程序中页面栈最多十层。</p>
+</blockquote>
+<p>4.生命周期</p>
+<blockquote>
+<ul>
+<li>1.onLaunch小程序初始化完成时（全局只触发一次）<ul>
+<li>2.onLoad页面加载时触发。一个页面只会调用一次</li>
+<li>3.onShow页面显示/切入前台时触发。</li>
+<li>4.onReady页面初次渲染完成时触发。一个页面只会调用一次，代表页面已经准备妥当，可以和视图层进行交互。</li>
+<li>5.onHide页面隐藏/切入后台时触发。</li>
+<li>6.onUnload页面卸载时触发</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<img src="/2019/01/24/Interview-Questions/mina-lifecycle.png" title="mina-lifecycle">
 <h1 id="非框架知识"><a href="#非框架知识" class="headerlink" title="非框架知识"></a>非框架知识</h1><p>1.serviceworker</p>
 <blockquote>
 <p>参考本文<a href="https://www.cnblogs.com/dojo-lzz/p/8047336.html" target="_blank" rel="noopener">https://www.cnblogs.com/dojo-lzz/p/8047336.html</a></p>
@@ -253,6 +284,34 @@
 <p>33.GraphQL</p>
 <blockquote>
 <p>详情请关注官网链接<a href="http://graphql.cn/" target="_blank" rel="noopener">http://graphql.cn/</a><br><strong>概念</strong>：一种用于 API 的查询语言，代替rest api</p>
+</blockquote>
+<p>34.node登陆注册</p>
+<blockquote>
+<ul>
+<li>bcrypt<ul>
+<li>jwt</li>
+<li>passport</li>
+<li>passport-jwt</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p>35.node 中间件</p>
+<blockquote>
+<p>参考<a href="https://zhuanlan.zhihu.com/p/30384677" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/30384677</a></p>
+</blockquote>
+<p>36.JWT</p>
+<blockquote>
+<p> 中间用点分隔开，并且都会使用 Base64 编码</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>1.header（头部）<ul>
+<li>2.payload（数据）</li>
+<li>3.signature（签名）</li>
+</ul>
+</li>
+</ul>
 </blockquote>
 <h1 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h1><p>1.冒泡排序<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> function bubleSort(arr) &#123;</span><br><span class="line">    var len = arr.length;</span><br><span class="line">    for (let i = len ; i &gt;= 2;i--) &#123;</span><br><span class="line">        for(let j = 0; j &lt;= i - 1; j++) &#123;</span><br><span class="line">            if(arr[j] &gt; arr[j + 1]) &#123;</span><br><span class="line">               // [arr[j],arr[j+1]] = [arr[j+1],arr[j]]</span><br><span class="line">                let tmp = arr[j+1]</span><br><span class="line">                arr[j+1] = arr[j]</span><br><span class="line">                arr[j] = tmp</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>2.快速排序<br>原理：选一个数，比较大小，放在当前数的左右数组，最后递归左右数组<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function quickSort(arr) &#123;</span><br><span class="line">    if(arr.length &lt;= 1) &#123;</span><br><span class="line">        return arr;  //递归出口</span><br><span class="line">    &#125;</span><br><span class="line">    var left = [],</span><br><span class="line">        right = [],</span><br><span class="line">        current = arr.splice(0,1); </span><br><span class="line">    for(let i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">        if(arr[i] &lt; current) &#123;</span><br><span class="line">            left.push(arr[i])  //放在左边</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            right.push(arr[i]) //放在右边</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return quickSort(left).concat(current,quickSort(right));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
