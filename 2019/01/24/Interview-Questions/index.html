@@ -154,13 +154,22 @@
 </blockquote>
 <p>12.跨越的处理方案</p>
 <blockquote>
-<p>  协议，域名，端口不用<br>  1、 通过jsonp跨域 （只支持get）<br>    2、 document.domain + iframe跨域（仅限主域相同，子域不同的跨域应用场景）<br>    3、 window.name + iframe跨域<br>    –  3.1name值在不同的页面（甚至不同域名）加载后依旧存在，并且可以支持非常长的 name 值（2MB）。<br>    4、 postMessage跨域<br>    5、 跨域资源共享（CORS）<code>Access-Control-Allow-Origin</code><br>    –  5.1普通跨域请求：只服务端设置Access-Control-Allow-Origin即可，前端无须设置，<br>    –  5.2若要带cookie请求：前后端都需要设置。<br>    6、 nginx代理跨域<br>    7、 nodejs中间件代理跨域<br>    8、 Vue跨域：(proxy)</p>
+<p>  协议，域名，端口不用<br>  1、 通过jsonp跨域 （只支持get）<br>  2、 document.domain + iframe跨域（仅限主域相同，子域不同的跨域应用场景）<br>  3、 window.name + iframe跨域<br>  –  3.1name值在不同的页面（甚至不同域名）加载后依旧存在，并且可以支持非常长的 name 值（2MB）。<br>  4、 postMessage跨域<br>  5、 跨域资源共享（CORS）<code>Access-Control-Allow-Origin</code><br>  –  5.1普通跨域请求：只服务端设置Access-Control-Allow-Origin即可，前端无须设置，<br>  –  5.2若要带cookie请求：前后端都需要设置。<br>  6、 nginx代理跨域<br>  7、 nodejs中间件代理跨域<br>  8、 Vue跨域：(proxy)</p>
 </blockquote>
 <p>13.重绘和回流<br>重绘(repaint): 当元素样式的改变不影响布局时，浏览器将使用重绘对元素进行更新，此时由于只需要UI层面的重新像素绘制，因此 损耗较少</p>
 <p>回流(reflow): 当元素的尺寸、结构或触发某些属性时，浏览器会重新渲染页面，称为回流。此时，浏览器需要重新经过计算，计算后还需要重新页面布局，因此是较重的操作。会触发回流的操作:</p>
 <p>15.性能优化</p>
 <blockquote>
-<p>1.一些常用压缩方式<br>2.服务器缓存策略</p>
+<p>1.一些常用压缩方式<br>  1.减少HTTP请求数</p>
+<ul>
+<li>1.资源合并与压缩</li>
+<li>2.图片Sprites</li>
+<li>3.HTTP缓存</li>
+</ul>
+</blockquote>
+<p>  2.<code>script</code>脚本置底（或defer）<br>  3.web worker<br>  4.回流重绘</p>
+<blockquote>
+<p>2.服务器缓存策略</p>
 <ul>
 <li>Cache-Control/Expires:浏览器判断缓存是否过期，未过期时，直接使用强缓存，<strong>如果同时出现，Cache-Control的 max-age 优先级高于 Expires</strong></li>
 </ul>
@@ -313,4 +322,14 @@
 </blockquote>
 <h1 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h1><p>1.冒泡排序<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> function bubleSort(arr) &#123;</span><br><span class="line">    var len = arr.length;</span><br><span class="line">    for (let i = len ; i &gt;= 2;i--) &#123;</span><br><span class="line">        for(let j = 0; j &lt;= i - 1; j++) &#123;</span><br><span class="line">            if(arr[j] &gt; arr[j + 1]) &#123;</span><br><span class="line">               // [arr[j],arr[j+1]] = [arr[j+1],arr[j]]</span><br><span class="line">                let tmp = arr[j+1]</span><br><span class="line">                arr[j+1] = arr[j]</span><br><span class="line">                arr[j] = tmp</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>2.快速排序<br>原理：选一个数，比较大小，放在当前数的左右数组，最后递归左右数组<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function quickSort(arr) &#123;</span><br><span class="line">    if(arr.length &lt;= 1) &#123;</span><br><span class="line">        return arr;  //递归出口</span><br><span class="line">    &#125;</span><br><span class="line">    var left = [],</span><br><span class="line">        right = [],</span><br><span class="line">        current = arr.splice(0,1); </span><br><span class="line">    for(let i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">        if(arr[i] &lt; current) &#123;</span><br><span class="line">            left.push(arr[i])  //放在左边</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            right.push(arr[i]) //放在右边</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return quickSort(left).concat(current,quickSort(right));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-</div></article></div></main><footer><div class="paginator"><a href="/2019/01/27/【前端该懂的服务器知识】linux彻底卸载nginx/" class="prev">PREV</a><a href="/2019/01/21/When to use var vs let vs const in JavaScript/" class="next">NEXT</a></div><div class="copyright"><p>© 2019 <a href="http://yoursite.com">LJTin</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
+<h1 id="JsBridge的核心"><a href="#JsBridge的核心" class="headerlink" title="JsBridge的核心"></a>JsBridge的核心</h1><ul>
+<li>1.用途：实现Native与Js相互调用的功能</li>
+<li>2.核心：<blockquote>
+<ul>
+<li>1.拦截Url</li>
+<li>2.load url(“javascript:js_method()”);</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</div></article></div></main><footer><div class="paginator"><a href="/2019/01/27/【前端该懂的服务器知识】linux彻底卸载nginx/" class="prev">上一篇</a><a href="/2019/01/21/When to use var vs let vs const in JavaScript/" class="next">下一篇</a></div><div class="copyright"><p>© 2019 <a href="http://yoursite.com">LJTin</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
