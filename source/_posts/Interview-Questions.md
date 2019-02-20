@@ -206,16 +206,16 @@ console.log(a,b);
 12.跨越的处理方案
 >   协议，域名，端口不用
 >   1、 通过jsonp跨域 （只支持get）
-    2、 document.domain + iframe跨域（仅限主域相同，子域不同的跨域应用场景）
-    3、 window.name + iframe跨域
-    --  3.1name值在不同的页面（甚至不同域名）加载后依旧存在，并且可以支持非常长的 name 值（2MB）。
-    4、 postMessage跨域
-    5、 跨域资源共享（CORS）`Access-Control-Allow-Origin`
-    --  5.1普通跨域请求：只服务端设置Access-Control-Allow-Origin即可，前端无须设置，
-    --  5.2若要带cookie请求：前后端都需要设置。
-    6、 nginx代理跨域
-    7、 nodejs中间件代理跨域
-    8、 Vue跨域：(proxy)
+>   2、 document.domain + iframe跨域（仅限主域相同，子域不同的跨域应用场景）
+>   3、 window.name + iframe跨域
+>   --  3.1name值在不同的页面（甚至不同域名）加载后依旧存在，并且可以支持非常长的 name 值（2MB）。
+>   4、 postMessage跨域
+>   5、 跨域资源共享（CORS）`Access-Control-Allow-Origin`
+>   --  5.1普通跨域请求：只服务端设置Access-Control-Allow-Origin即可，前端无须设置，
+>   --  5.2若要带cookie请求：前后端都需要设置。
+>   6、 nginx代理跨域
+>   7、 nodejs中间件代理跨域
+>   8、 Vue跨域：(proxy)
     
 13.重绘和回流
 重绘(repaint): 当元素样式的改变不影响布局时，浏览器将使用重绘对元素进行更新，此时由于只需要UI层面的重新像素绘制，因此 损耗较少
@@ -227,6 +227,15 @@ console.log(a,b);
 
 15.性能优化
 >1.一些常用压缩方式
+  1.减少HTTP请求数
+  - 1.资源合并与压缩
+  - 2.图片Sprites
+  - 3.HTTP缓存
+  
+  2.`script`脚本置底（或defer）
+  3.web worker
+  4.回流重绘
+
 >2.服务器缓存策略
 - Cache-Control/Expires:浏览器判断缓存是否过期，未过期时，直接使用强缓存，**如果同时出现，Cache-Control的 max-age 优先级高于 Expires**
 
@@ -249,10 +258,10 @@ console.log(a,b);
 
 22.箭头函数什么情况下不能用(**需要动态上下文的场景**)
 >1.定义对象方法
-2.定义原型方法
-3.定义事件回调函数
-4.定义构造函数
-5.刻意追求过短的代码，可能会给代码阅读和逻辑理解带来困难。
+>2.定义原型方法
+>3.定义事件回调函数
+>4.定义构造函数
+>5.刻意追求过短的代码，可能会给代码阅读和逻辑理解带来困难。
 
 23.rem和em的区别
 >区别：rem是基于**html元素的字体大小**来决定，而em则根据**使用它的元素的大小**决定（很多人错误以为是根据父类元素，实际上是使用它的元素继承了父类的属性才会产生的错觉）
@@ -439,3 +448,11 @@ function quickSort(arr) {
 }
 
 ```
+
+
+
+# JsBridge的核心
+ - 1.用途：实现Native与Js相互调用的功能
+ - 2.核心：
+> - 1.拦截Url
+> - 2.load url("javascript:js_method()");
