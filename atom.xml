@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-02-13T15:42:10.079Z</updated>
+  <updated>2019-02-26T08:25:51.845Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计算机组成原理</title>
+    <link href="http://yoursite.com/2019/02/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86---%E3%80%90%E7%AC%AC%E4%B8%80%E7%AB%A0%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0%E3%80%91/"/>
+    <id>http://yoursite.com/2019/02/23/计算机组成原理---【第一章计算机系统概述】/</id>
+    <published>2019-02-23T07:12:04.000Z</published>
+    <updated>2019-02-26T08:25:51.845Z</updated>
+    
+    <content type="html"><![CDATA[<p>视频传送门✈️️️️️️️✈️✈️<a href="https://www.bilibili.com/video/av24737355" target="_blank" rel="noopener">https://www.bilibili.com/video/av24737355</a></p><p>建议使用<strong>1.5倍</strong>速观看</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;视频传送门✈️️️️️️️✈️✈️&lt;a href=&quot;https://www.bilibili.com/video/av24737355&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.bilibili.com/video/av2473
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>PM2</title>
