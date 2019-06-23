@@ -58,6 +58,8 @@ tags: 面试
 1.git中rebase是做什么的，有何意义
 > 把提交的记录变得流畅
 
+2.git reset回滚
+
 # 微信小程序
 1.简述微信小程序原理？
 > - 1.微信小程序采用JavaScript、WXML、WXSS三种技术进行开发
@@ -127,6 +129,13 @@ tags: 面试
             component: resolve => require.ensure([], () => resolve(require('../components/Hello')), 'demo')
         }
   ```
+6.webpack如何分离elementui文件
+```
+使用cdn代替，加速加载
+externals: {   
+  'element-ui': 'ELEMENT'
+},
+```
 
 
 6.阻止冒泡
@@ -344,6 +353,8 @@ function uniqueArr(arr){
 > 方法一:  then()执行
 > 方法二： 使用队列执行
 > 方法三： 使用async、await实现类似同步编程
+
+30.实现promise.all
 
 30.Event loop
 > 首先放上参考文章，非常推荐，简单明了！！！https://juejin.im/post/59e85eebf265da430d571f89
